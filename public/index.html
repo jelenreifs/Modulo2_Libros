@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Libros</title>
+</head>
+
+<body>
+    <header>
+        <h1>Libros</h1>
+    </header>
+
+    <main>
+        <div class="formulario-wrapper">
+            <!--  BUSCAR LIBRO  -->
+            <div class="formulario">
+                <h3>Busca un libro</h3>
+                <div class="inline">
+                    <input id="libroSearch" type="text" placeholder="Busca un libro" />
+                    <button onclick="buscarLibro()">BUSCAR</button>
+                </div>
+            </div>
+
+
+            <!--  AÑADIR LIBRO  -->
+            <div class="formulario">
+                <h3>Añade un libro</h3>
+                <div class="inline row">
+                    <input id="libroAdd" type="text" placeholder="Añade un libro" />
+                    <button onclick="addLibro()">AÑADIR</button>
+                </div>
+            </div>
+
+            <!--  EDITAR MESA  -->
+            <div class="formulario">
+                <h3>Edita el estado de un libro</h3>
+                <div class="inline row">
+                    <input id="libroEdit" type="text" placeholder="Cambia el estado" />
+                    <select id="estado">
+                        <option value="leido">Leido</option>
+                        <option value="noLeido">Sin leer</option>
+                    </select>
+                    <button onclick="editLibro()">CAMBIAR ESTADO</button>
+                </div>
+            </div>
+
+            <!--  ELIMINAR LIBRO  -->
+            <div class="formulario">
+                <h3>Eliminar libro</h3>
+                <div class="inline">
+                    <input id="libroDelete" type="text" placeholder="Elimina un libro" />
+                    <button onclick="deleteLibro()">ELIMINAR</button>
+                </div>
+            </div>
+        </div>
+
+        <diV id="resultado"></diV>
+
+
+    </main>
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
