@@ -56,8 +56,8 @@ app.get("/api/libros/:titulo", function (req, res) {
 
 /* AÑADIR UN LIBRO A LA COLECCIÓN */
 app.post("/api/nuevoLibro/:titulo", function (req, res) {
-
- let libro = {
+   
+ const libro = {
     titulo: req.params.titulo,
     estado: "sin leer"
 }    
@@ -98,7 +98,7 @@ app.delete("/api/borrarLibro/:titulo", function (req, res) {
     console.log(body);
     
     db.collection("libros")
-        .deleteMany({ titulo : titulo }, function (err, datos) {
+        .deleteOne({ titulo : titulo }, function (err, datos) {
             if (err !== null) {
         res.send(err);
             } else {
